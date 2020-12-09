@@ -4,7 +4,7 @@ const weatherForm = document.querySelector('form')
 const searchElement = document.querySelector('input')
 const msg1 = document.querySelector('#message-1')
 const msg2 = document.querySelector('#message-2')
-
+const img1 = document.querySelector('#currWeatherIcon')
 
 
 weatherForm.addEventListener('submit', (e) => {
@@ -25,6 +25,7 @@ weatherForm.addEventListener('submit', (e) => {
         else {
             msg1.textContent = data.region.name
             msg2.textContent = data.weatherDescription
+            img1.setAttribute('src',data.currIcon)
         }
     })
 })
