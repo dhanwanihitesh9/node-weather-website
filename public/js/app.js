@@ -26,6 +26,8 @@ weatherForm.addEventListener('submit', (e) => {
             msg1.textContent = data.region.name
             msg2.textContent = data.weatherDescription
             img1.setAttribute('src',data.currIcon)
+            document.querySelector('#message-3').textContent = 'Current Temperature: '+data.temperature
+            document.querySelector('#message-4').textContent = 'Feels Like'+data.feelsLike
         }
     })
 })
