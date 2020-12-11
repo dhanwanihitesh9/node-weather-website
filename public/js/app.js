@@ -5,7 +5,8 @@ const searchElement = document.querySelector('input')
 const msg1 = document.querySelector('#message-1')
 const msg2 = document.querySelector('#message-2')
 const img1 = document.querySelector('#currWeatherIcon')
-
+const msg3 = document.querySelector('#message-3')
+const msg4 = document.querySelector('#message-4')
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -13,7 +14,9 @@ weatherForm.addEventListener('submit', (e) => {
     const location = searchElement.value
     msg1.textContent = 'Loading ...'
     msg2.textContent = ''
-
+    msg3.textContent = ''
+    msg4.textContent = ''
+    img1.setAttribute('src','')
     const url = '/weather?address='+location
     console.log(url)
     fetch(url).then((response) => {
